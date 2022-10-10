@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Row } from './row';
 import { Form } from './form';
 import {  useSelector } from 'react-redux';
@@ -10,7 +10,8 @@ export const AppOverlay = () => {
     const wordle = useSelector((state:RootState) => state.wordle.value) 
 
     const rows = useSelector((state:RootState) => state.rows.value)
-
+    
+    //bug
     return (
         <div style={{display: "flex", flexDirection: "row",}}>
             {/* left column */}
